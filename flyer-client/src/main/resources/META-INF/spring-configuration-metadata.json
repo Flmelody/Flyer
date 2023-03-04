@@ -1,0 +1,52 @@
+{
+  "groups": [
+    {
+      "name": "spring.cloud.flyer.discovery",
+      "type": "com.flmelody.cloud.FlyerDiscoveryProperties",
+      "sourceType": "com.flmelody.cloud.FlyerDiscoveryProperties"
+    }
+  ],
+  "properties": [
+    {
+      "name": "spring.cloud.flyer.discovery.server-addr",
+      "type": "java.lang.String",
+      "sourceType": "com.flmelody.cloud.FlyerDiscoveryProperties",
+      "description": "flyers discovery server address.",
+      "defaultValue": ""
+    },
+    {
+      "name": "spring.cloud.flyer.discovery.username",
+      "type": "java.lang.String",
+      "sourceType": "com.flmelody.cloud.FlyerDiscoveryProperties",
+      "description": "flyers authentication username.",
+      "defaultValue": ""
+    },
+    {
+      "name": "spring.cloud.flyer.discovery.password",
+      "type": "java.lang.String",
+      "sourceType": "com.flmelody.cloud.FlyerDiscoveryProperties",
+      "description": "flyers authentication password.",
+      "defaultValue": ""
+    },
+    {
+      "name": "spring.cloud.flyer.discovery.service-ip",
+      "type": "java.lang.String",
+      "sourceType": "com.flmelody.cloud.FlyerDiscoveryProperties",
+      "description": "The ip address your want to register for your service instance, needn't set if the autodetect ip works well."
+    },
+    {
+      "name": "spring.cloud.flyer.discovery.service-port",
+      "type": "java.lang.Integer",
+      "sourceType": "com.flmelody.cloud.FlyerDiscoveryProperties",
+      "description": "The port your want to register for your service instance, needn't set if the autodetect port works well.",
+      "defaultValue": -1
+    },
+    {
+      "name": "spring.cloud.flyer.discovery.service.metadata",
+      "type": "java.util.Map<java.lang.String,java.lang.String>",
+      "sourceType": "com.flmelody.cloud.FlyerDiscoveryProperties",
+      "description": "extra metadata to register."
+    }
+  ],
+  "hints": []
+}

@@ -1,0 +1,41 @@
+plugins {
+	id 'java'
+	id 'maven-publish'
+}
+
+group = 'com.flmelody'
+version = '0.0.1-SNAPSHOT'
+sourceCompatibility = '17'
+
+repositories {
+	mavenCentral()
+}
+
+jar {
+	duplicatesStrategy(DuplicatesStrategy.WARN)
+}
+tasks {
+	processResources {
+		duplicatesStrategy = DuplicatesStrategy.WARN
+	}
+}
+
+dependencies {
+	implementation project(':flyer-common')
+	implementation libs.bundles.logging
+	testImplementation libs.logback.classic
+	implementation libs.commons.validator
+	implementation libs.jackson
+	implementation libs.gson
+	implementation libs.commons.lang3
+	implementation libs.okhttp
+	implementation libs.spring.boot.autoconfigure
+	implementation libs.spring.cloud.commons
+	annotationProcessor libs.spring.boot.configuration.processor
+	compileOnly libs.lombok
+	annotationProcessor libs.lombok
+}
+
+tasks.named('test') {
+	useJUnitPlatform()
+}

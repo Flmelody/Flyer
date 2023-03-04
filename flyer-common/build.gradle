@@ -1,0 +1,27 @@
+plugins {
+    id 'java'
+    alias(libs.plugins.io.spring.dependency.management)
+}
+
+group = 'com.flmelody'
+version = '0.0.1-SNAPSHOT'
+sourceCompatibility = '17'
+
+repositories {
+    mavenCentral()
+}
+tasks {
+    processResources {
+        duplicatesStrategy = DuplicatesStrategy.WARN
+    }
+}
+
+dependencies {
+    implementation libs.spring.cloud.commons
+    compileOnly libs.lombok
+    annotationProcessor libs.lombok
+}
+
+tasks.named('test') {
+    useJUnitPlatform()
+}

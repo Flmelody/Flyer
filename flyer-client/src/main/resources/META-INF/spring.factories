@@ -1,0 +1,5 @@
+# Auto Configure
+org.springframework.boot.autoconfigure.EnableAutoConfiguration=\
+com.flmelody.cloud.registry.FlyerServiceRegistryAutoConfiguration,\
+com.flmelody.cloud.discovery.FlyerDiscoveryClientAutoConfiguration,\
+com.flmelody.cloud.discovery.FlyerDiscoveryAutoConfiguration

@@ -1,0 +1,45 @@
+rootProject.name = 'flyer'
+include('flyer-common')
+include('flyer-client')
+include('flyer-server')
+
+dependencyResolutionManagement {
+    versionCatalogs {
+        libs {
+            version('lombokVersion', '1.18.24')
+            version('logbackVersion', '1.4.5')
+            version('slf4jVersion', '2.0.6')
+            version('gsonVersion', '2.10.1')
+            version('jacksonVersion', '2.14.2')
+            version('okhttpVersion', '4.10.0')
+            version('commonsLang3Version', '3.12.0')
+            version('commonsValidatorVersion', '1.7')
+            version('springBootVersion', '3.0.2')
+            version('springCloudVersion', '4.0.1')
+            version('graalvmPluginVersion', '0.9.18')
+            version('springDependencyManagementPluginVersion', '1.1.0')
+
+            library('lombok', 'org.projectlombok', 'lombok').versionRef('lombokVersion')
+            library('logback.core', 'ch.qos.logback', 'logback-core').versionRef('logbackVersion')
+            library('logback.classic', 'ch.qos.logback', 'logback-classic').versionRef('logbackVersion')
+            library('slf4j', 'org.slf4j', 'slf4j-api').versionRef('slf4jVersion')
+            library('gson', 'com.google.code.gson', 'gson').versionRef('gsonVersion')
+            library('jackson', 'com.fasterxml.jackson.core', 'jackson-databind').versionRef('jacksonVersion')
+            library('okhttp', 'com.squareup.okhttp3', 'okhttp').versionRef('okhttpVersion')
+            library('commons.lang3', 'org.apache.commons', 'commons-lang3').versionRef('commonsLang3Version')
+            library('commons.validator', 'commons-validator', 'commons-validator').versionRef('commonsValidatorVersion')
+            library('spring.boot.starter.web', 'org.springframework.boot', 'spring-boot-starter-web').versionRef('springBootVersion')
+            library('spring.boot.autoconfigure', 'org.springframework.boot', 'spring-boot-autoconfigure').versionRef('springBootVersion')
+            library('spring.boot.configuration.processor', 'org.springframework.boot', 'spring-boot-configuration-processor').versionRef('springBootVersion')
+            library('spring.boot.devtools', 'org.springframework.boot', 'spring-boot-devtools').versionRef('springBootVersion')
+            library('spring.boot.starter.test', 'org.springframework.boot', 'spring-boot-starter-test').versionRef('springBootVersion')
+            library('spring.cloud.commons', 'org.springframework.cloud', 'spring-cloud-commons').versionRef('springCloudVersion')
+
+            bundle('logging', ['logback.core', 'slf4j'])
+
+            plugin('org.springframework.boot', 'org.springframework.boot').versionRef('springBootVersion')
+            plugin('io.spring.dependency.management', 'io.spring.dependency-management').versionRef('springDependencyManagementPluginVersion')
+            plugin('org.graalvm.buildtools.native', 'org.graalvm.buildtools.native').versionRef('graalvmPluginVersion')
+        }
+    }
+}
